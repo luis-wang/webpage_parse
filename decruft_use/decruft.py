@@ -1,4 +1,5 @@
 #!/usr/bin/env python
+#coding:utf8
 from BeautifulSoup import NavigableString
 from page_parser import parse, get_title, get_body, Unparseable
 import logging
@@ -8,8 +9,11 @@ from lxml.html.clean import Cleaner
 import traceback
 import sys
 logging.basicConfig(level=logging.INFO)
-logging.warning('hi')
-logging.debug('hi')
+
+#logging.warning('hi')
+#logging.debug('hi')
+
+
 REGEXES = { 'unlikelyCandidatesRe': re.compile('share|bookmark|adwrapper|ad_wrapper|combx|comment|disqus|foot|header|menu|meta|nav|rss|shoutbox|sidebar|sponsor',re.I),
     'okMaybeItsACandidateRe': re.compile('and|article|body|column|main',re.I),
     'positiveRe': re.compile('caption|article|body|content|entry|hentry|page|pagination|post|text',re.I),
