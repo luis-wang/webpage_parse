@@ -83,7 +83,7 @@ if __name__ == '__main__':
            ]
     end_url = 'http://www.taoqutu.com/last_500.html'
     
-    img_dir = 'E:/2kkkkk/qutu1/'
+    img_dir = 'C:/data/imgs/qutu/1_500/'
     
     url = urls[0]
     
