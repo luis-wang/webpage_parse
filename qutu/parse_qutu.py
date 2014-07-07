@@ -85,7 +85,7 @@ if __name__ == '__main__':
     
     img_dir = 'E:/2kkkkk/qutu1/'
     
-    url = urls[-1]
+    url = urls[0]
     
     #下载起始的页面文档
     html_doc = urllib2.urlopen(url).read()
