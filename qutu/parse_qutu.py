@@ -8,17 +8,24 @@ from bs4 import BeautifulSoup
 from persistent_qutu import insert,dbconn,find_ele
 
 
-img_dir = 'E:/2kkkkk/qutu/'
+
 
 def down_image(src, imgid):
     "把图片保存到磁盘空间"
+    global img_dir
+    
     try:
         #src = 'http://i1.taoqutu.com/2014/07/06110832568.jpg'
+        print '-1-',
         fname = str(src.split('taoqutu.com')[1]).replace('/','-')[1:]
+        print '-2-',
         img_path = os.path.join(img_dir, fname)
+        print '-3-',
         urllib.urlretrieve(src, img_path)
+        print '-4-',
     except:
         print '下面失败:src = ',src
+        print '-5-',
         
     
     return img_path
@@ -72,8 +79,11 @@ def crawler_page(soup):
 if __name__ == '__main__':
     print 'start...'
     urls = ['http://www.taoqutu.com/',
-            'http://www.taoqutu.com/last_200.html', #上次获取到的位置
+            'http://www.taoqutu.com/last_400.html', #上次获取到的位置
            ]
+    end_url = 'http://www.taoqutu.com/last_500.html'
+    
+    img_dir = 'E:/2kkkkk/qutu1/'
     
     url = urls[-1]
     
@@ -88,6 +98,8 @@ if __name__ == '__main__':
         
         #找下一个页面
         url = 'http://www.taoqutu.com' + nextpage_tag.get('href')
+        if url == end_url:
+            break
         print '***正在解析 ：url = ',url
         
         
