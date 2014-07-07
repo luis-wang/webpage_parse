@@ -4,11 +4,13 @@
 '''
 import pymongo
 
+host = '112.124.31.180'
+
 def test1():
     print '-1- connect---------------------'
     #-1- connect
     #conn = pymongo.Connection() # 连接本机数据库
-    conn = pymongo.Connection(host="127.0.0.1") # 连接指定IP的数据库112.124.31.180
+    conn = pymongo.Connection(host=host) # 连接指定IP的数据库112.124.31.180
     db = conn.test # 进入指定名称的数据库
     users = db.users # 获取数据库里的 users 集合
     #users = db['users'] # 获取数据库里的 users 集合,也可以用字典来获取
@@ -29,7 +31,7 @@ def test1():
 
 def dbconn():
     "返回连接对象"
-    conn = pymongo.Connection(host="127.0.0.1") # 连接指定IP的数据库112.124.31.180
+    conn = pymongo.Connection(host=host) # 连接指定IP的数据库112.124.31.180
     db = conn.qutu # 进入指定名称的数据库
     imgs = db.imgs # 获取数据库里的 imgs 集合
     return imgs
