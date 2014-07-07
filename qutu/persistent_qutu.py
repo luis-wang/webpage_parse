@@ -40,14 +40,23 @@ def insert(db_imgs,ele):
     
 def find_ele(db_imgs,ele):
     return db_imgs.find_one(ele)
-    
+
+def querys(db_imgs, param):
+    for p in db_imgs.find({"title": {'$regex': param}}):
+        print p['title'],p['img_path']  
 
 if __name__ == '__main__':
     db_imgs = dbconn()
     
+    '''
     ele = dict(name = "user3", age = 27, addr='上海市的嘛')
     res = insert(db_imgs,ele)
     print res
+    '''
+    param = '美女'
+    querys(db_imgs,param)
+    
+    
     print 'end'
     
     
