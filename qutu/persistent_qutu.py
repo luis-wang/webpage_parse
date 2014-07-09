@@ -55,7 +55,7 @@ if __name__ == '__main__':
     res = insert(db_imgs,ele)
     print res
     '''
-    param = '美女'
+    param = '买了个美的电扇，回家一看太坑爹了'
     querys(db_imgs,param)
     
     

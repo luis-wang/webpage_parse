@@ -24,7 +24,7 @@ def down_image(src, imgid):
         urllib.urlretrieve(src, img_path)
         print '-4-',
     except:
-        print '下面失败:src = ',src
+        print u'下面失败:src = ',src
         print '-5-',
         
     
@@ -53,10 +53,10 @@ def save_img(img, img_tag):
             #更新图片文件的路径
             #update({"_id": ObjectId("52818bad705d834f989b83af")},{"$set":{u'name': u'wxd1'}})
             db_imgs.update(ele, {"$set":{u'img_path': img_path}})
-            print '已保存：',img.get('src')
+            print u'已保存：',img.get('src')
             
         else:
-            print '已经存在 ：',ele
+            print u'已经存在 ：',ele
                 
                 
 def crawler_page(soup):
@@ -79,13 +79,13 @@ def crawler_page(soup):
 if __name__ == '__main__':
     print 'start...'
     urls = ['http://www.taoqutu.com/',
-            'http://www.taoqutu.com/last_400.html', #上次获取到的位置
+            'http://www.taoqutu.com/last_1000.html', #上次获取到的位置
            ]
-    end_url = 'http://www.taoqutu.com/last_500.html'
+    end_url = 'http://www.taoqutu.com/last_1500.html'
     
-    img_dir = 'C:/data/imgs/qutu/1_500/'
+    img_dir = 'C:/data/imgs/qutu/1000_1500/'
     
-    url = urls[0]
+    url = urls[-1]
     
     #下载起始的页面文档
     html_doc = urllib2.urlopen(url).read()
@@ -100,7 +100,7 @@ if __name__ == '__main__':
         url = 'http://www.taoqutu.com' + nextpage_tag.get('href')
         if url == end_url:
             break
-        print '***正在解析 ：url = ',url
+        print u'***正在解析 ：url = ',url
         
         
         html_doc = urllib2.urlopen(url).read()
