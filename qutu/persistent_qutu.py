@@ -45,7 +45,7 @@ def find_ele(db_imgs,ele):
 
 def querys(db_imgs, param):
     for p in db_imgs.find({"title": {'$regex': param}}):
-        print p['title'],p['img_path']  
+        print p['title'],p['img_path'],p['src']  
 
 if __name__ == '__main__':
     db_imgs = dbconn()
@@ -55,7 +55,7 @@ if __name__ == '__main__':
     res = insert(db_imgs,ele)
     print res
     '''
-    param = '买了个美的电扇，回家一看太坑爹了'
+    param = '大屁股'
     querys(db_imgs,param)
     
     
