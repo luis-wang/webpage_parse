@@ -35,6 +35,13 @@ def dbconn():
     db = conn.qutu # 进入指定名称的数据库
     imgs = db.imgs # 获取数据库里的 imgs 集合
     return imgs
+
+def jokeji_dbconn():
+    "返回连接对象"
+    conn = pymongo.Connection(host=host) # 连接指定IP的数据库112.124.31.180
+    db = conn.jokeji # 进入指定名称的数据库
+    imgs = db.imgs # 获取数据库里的 imgs 集合
+    return imgs    
     
 
 def insert(db_imgs,ele):
@@ -55,7 +62,7 @@ if __name__ == '__main__':
     res = insert(db_imgs,ele)
     print res
     '''
-    param = '大屁股'
+    param = '小三'
     querys(db_imgs,param)
     
     

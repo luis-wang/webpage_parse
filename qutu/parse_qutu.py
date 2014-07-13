@@ -8,8 +8,6 @@ from bs4 import BeautifulSoup
 from persistent_qutu import insert,dbconn,find_ele
 
 
-
-
 def down_image(src, imgid):
     "把图片保存到磁盘空间"
     global img_dir

@@ -16,16 +16,14 @@ def insert_idea(db):
     "插入一个新的idea"
     idea = {}
     
-    url = 'http://www.celeryproject.org/'
-    title = 'celery 分布式的任务队列'
+    url = 'http://qiwsir.github.io/qw.html'
+    title = '两性健康'
     
     content = """
-Celery: Distributed Task Queue
-Celery is an asynchronous task queue/job queue based on distributed message passing.    It is focused on real-time operation, but supports scheduling as well.
-The execution units, called tasks, are executed concurrently on a single or more worker servers using multiprocessing, Eventlet,    or gevent. Tasks can execute asynchronously (in the background) or synchronously (wait until ready).
-Celery is used in production systems to process millions of tasks a day.
-
-
+http://www.iyaya.com/yuer/zhinan-597
+http://www.xywy.com/dzjk/nrsj/
+http://health.pclady.com.cn/malehealth/
+http://health.pclady.com.cn/healthzq/
 """
     
     idea['title']   = title
