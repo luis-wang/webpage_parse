@@ -7,8 +7,6 @@ import os,sys,time
 import urllib,urllib2
 from bs4 import BeautifulSoup
 
-import requests
-import dhtmlparser as d
 from datetime import datetime as dt
 
 from myutils.page import Page
