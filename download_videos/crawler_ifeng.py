@@ -6,7 +6,6 @@
 import os,sys,time
 import urllib,urllib2
 from bs4 import BeautifulSoup
-from persistent_qutu import insert,dbconn,find_ele,jokeji_dbconn
 
 import requests
 import dhtmlparser as d
