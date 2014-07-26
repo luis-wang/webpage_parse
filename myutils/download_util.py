@@ -5,7 +5,6 @@
 import os,sys
 import urllib,urllib2
 from bs4 import BeautifulSoup
-from persistent_qutu import insert,dbconn,find_ele
 
 def down_image(src, imdir):
     "把图片保存到磁盘空间"
